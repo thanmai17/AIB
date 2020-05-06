@@ -7,7 +7,7 @@ if ($Version -eq 6) {
 
 Write-Verbose -Message "Operating System is Windows 2012" -Verbose
 
-Add-WindowsFeature -Name Desktop-Experience,Remote-Assistance,Remote-Desktop-Services,RDS-RD-Server -Restart
+Add-WindowsFeature -Name Desktop-Experience,Remote-Assistance,Remote-Desktop-Services,RDS-RD-Server
 
 }
 ElseIf ($Version -eq 10) {
@@ -23,4 +23,4 @@ Else {
 Write-Verbose -Message " Invalid Operating System. Installation failed." -Verbose
 
 }
-Restart-Computer -ComputerName $env:COMPUTERNAME
+#Restart-Computer -ComputerName $env:COMPUTERNAME
